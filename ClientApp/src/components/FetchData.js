@@ -7,7 +7,7 @@ export class FetchData extends Component {
     super(props);
     this.state = { forecasts: [], loading: true };
 
-    fetch('api/SampleData/WeatherForecasts')
+    fetch('api/users')
       .then(response => response.json())
       .then(data => {
         this.setState({ forecasts: data, loading: false });
@@ -19,19 +19,19 @@ export class FetchData extends Component {
       <table className='table'>
         <thead>
           <tr>
-            <th>Date</th>
-            <th>Temp. (C)</th>
+            <th>Name</th>
+            <th>Gender</th>
             <th>Temp. (F)</th>
             <th>Summary</th>
           </tr>
         </thead>
         <tbody>
           {forecasts.map(forecast =>
-            <tr key={forecast.dateFormatted}>
-              <td>{forecast.dateFormatted}</td>
-              <td>{forecast.temperatureC}</td>
-              <td>{forecast.temperatureF}</td>
-              <td>{forecast.summary}</td>
+            <tr key={forecast.name}>
+              <td>{forecast.name}</td>
+              <td>{forecast.gender}</td>
+              <td>{forecast.smoking}</td>
+              <td>{forecast.car}</td>
             </tr>
           )}
         </tbody>
