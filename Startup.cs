@@ -5,6 +5,9 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.SpaServices.ReactDevelopmentServer;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Options;
+using UsersApi.Models;
+using UsersApi.Services;
 
 namespace WebApplication1
 {
@@ -20,6 +23,14 @@ namespace WebApplication1
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.Configure<PastaDatabaseSettings>(
+                Configuration.GetSection(nameof(PastaDatabaseSettings)));
+
+            services.AddSingleton<IPastaDatabaseSettings>(sp =>
+                sp.GetRequiredService<IOptions<PastaDatabaseSettings>>().Value);
+
+            services.AddSingleton<UserService>();
+            
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
             // In production, the React files will be served from this directory
