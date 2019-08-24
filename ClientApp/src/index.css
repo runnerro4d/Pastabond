@@ -1,0 +1,19 @@
+body {
+    padding-top: 50px;
+    background-color: #fce181;
+}
+
+
+.btn-primary {
+    background-color: #026670;
+}
+
+    .btn-primary :hover {
+        background-color: #9fedd7;
+    }
+
+
+@media () {
+    /* On small screens, the nav menu spans the full width of the screen. Leave a space for it. */
+    
+}

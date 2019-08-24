@@ -1,0 +1,87 @@
+﻿.navbar li .glyphicon {
+    margin-right: 10px;
+}
+
+.navbar, .navbar-default {
+    background-color: #edeae5 !important;
+}
+
+.navbar-brand {
+    padding:0%;
+    margin-right:20%;
+}
+
+/* Highlighting rules for nav menu items */
+.navbar .navbar-nav .active a,
+.navbar .navbar-nav .active a:hover,
+.navbar .navbar-nav .active a:focus {
+    background-image: none;
+    background-color: #9fedd7;
+    color: #026670;
+}
+
+@media () {
+    /* On large screens, convert the nav menu to a vertical sidebar */
+    nav {
+        border-radius: 0;
+        border-width: 0;
+        width: 100%;
+        background-color:  #026670;
+    }
+
+
+    .navbar-header {
+        float: none;
+    }
+
+    .navbar-toggle {
+        display: normal;
+        
+    }
+
+    .navbar .navbar-nav, .navbar-collapse {
+        color: #026670
+    }
+    .navbar .navbar-collapse {
+        border-top: 1px solid #444;
+        padding: 0;
+    }
+    .navbar .container-fluid {
+        padding: 0;
+        margin: 0;
+    }
+    .navbar .container-fluid .navbar-brand {
+        margin: 0;
+    }
+    .navbar ul {
+        float: none;
+    }
+    .navbar li {
+        float: none;
+        font-size: 15px;
+        margin: 6px;
+    }
+    .navbar li a {
+        padding: 10px 16px;
+        border-radius: 4px;
+    }
+    .navbar a {
+        /* If a menu item's text is too long, truncate it */
+        width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+
+    
+    #responsive-navbar-nav {
+        background-color: #026670 !important;
+    }
+
+    .nav-item {
+        align-self: flex-start;
+        text-align: left;
+        margin-left: 1%;
+        margin-right: 1%;
+    }
+}
