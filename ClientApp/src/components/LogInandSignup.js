@@ -48,6 +48,8 @@ export class LoginandSignup extends Component {
                         <Col md={3}><label >Occupation</label></Col>
                         <Col md={9}><input className=" form-control" type="text" placeholder="Enter Occupation" name="psw" required /></Col><br />
 
+
+
                         <Col md={3}><label >Gender</label></Col>
                         <Col md={9} style={{ "padding": "0%", "paddingRight":"5%"}}>
                             <Col md={3}><label className="radio-inline"><input type="radio" name="optradio" /> Male </label></Col>

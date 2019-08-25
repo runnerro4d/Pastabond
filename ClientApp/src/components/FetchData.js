@@ -53,3 +53,8 @@ export class FetchData extends Component {
     );
   }
 }
+
+
+export function fetchData() {
+    return ({FetchData});
+}
