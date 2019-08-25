@@ -21,8 +21,8 @@ export class FetchData extends Component {
           <tr>
             <th>Name</th>
             <th>Gender</th>
-            <th>Temp. (F)</th>
-            <th>Summary</th>
+            <th>Smoker or not</th>
+            <th>Having a car</th>
           </tr>
         </thead>
         <tbody>
@@ -46,8 +46,7 @@ export class FetchData extends Component {
 
     return (
       <div>
-        <h1>Weather forecast</h1>
-        <p>This component demonstrates fetching data from the server.</p>
+        <h1>Member List</h1>
         {contents}
       </div>
     );
